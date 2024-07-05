@@ -57,6 +57,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\Move\PlayerMove.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Naganeupseong\Shaders\PBR_Shaders.hlsl" />
+    <None Include="Assets\Naganeupseong\Shaders\UnrealCommon.cginc" />
+    <None Include="Assets\Naganeupseong\Shaders\PBR_Alpha.hlsl" />
+    <None Include="Assets\Naganeupseong\Shaders\PBR_Roof.hlsl" />
+    <None Include="Assets\Naganeupseong\Shaders\PBR_Alpha.shader" />
+    <None Include="Assets\Naganeupseong\Shaders\PBR_Roof.shader" />
+    <None Include="Assets\Naganeupseong\Shaders\PBR_Shaders.shader" />
+    <None Include="Assets\Naganeupseong\Shaders\LargeWorldCoordinates.hlsl" />
+    <None Include="Assets\Naganeupseong\Shaders\LWCOperations.hlsl" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
