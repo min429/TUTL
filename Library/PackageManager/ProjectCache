@@ -5,21 +5,78 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638545638302347838
-    m_Hash: 3841823420
+      ticks: 638563572179324237
+    m_Hash: 3175696757
   m_LockFileStatus:
     m_FilePath: D:/TUTL1/TUTL/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638545638380153868
-    m_Hash: 3065126310
+      ticks: 638563572179374236
+    m_Hash: 86421395
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.manakhovn.figma_to_unity_importer@https://github.com/ManakhovN/FigmaToUnityImporter.git?path=/Assets/FigmaImporter
+      testable: 0
+      isDirectDependency: 1
+      version: 0.1.2
+      source: 5
+      resolvedPath: D:\TUTL1\TUTL\Library\PackageCache\com.manakhovn.figma_to_unity_importer@5a73f9b5b0
+      assetPath: Packages/com.manakhovn.figma_to_unity_importer
+      name: com.manakhovn.figma_to_unity_importer
+      displayName: FigmaToUnityImporter
+      author:
+        name: ManakhovN
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Convert Figma Node to UnityUI and Import
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies:
+      - name: com.unity.textmeshpro
+        version: 2.1.4
+      resolvedDependencies:
+      - name: com.unity.textmeshpro
+        version: 3.0.6
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords:
+      - figma
+      - importer
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.collab-proxy@1.15.15
       testable: 0
       isDirectDependency: 1
