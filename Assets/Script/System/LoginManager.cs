@@ -10,13 +10,14 @@ public class LoginManager : MonoBehaviour
     public TMP_InputField inputEmail;       // 유저 아이디 입력 필드
     public TMP_InputField inputPwd;      // 유저 비밀번호 입력 필드
     public Button loginButton;      // 로그인 버튼
+    public Button signupButotn;      // 회원가입 버튼
     public TextMeshProUGUI errorMessage;       // 에러 메시지 텍스트
-
-    private const string baseUrl = "http://localhost:8080/api/";
 
     private void Start()
     {
+        // 버튼 클릭 리스너 등록
         loginButton.onClick.AddListener(OnLoginButtonClicked);
+        signupButotn.onClick.AddListener(OnSignUpButtonClicked);
 
         // 에러 메시지 숨기기
         errorMessage.gameObject.SetActive(false);
@@ -35,9 +36,14 @@ public class LoginManager : MonoBehaviour
         StartCoroutine(LoginCoroutine(email, pwd)); // 로그인 코루틴 시작
     }
 
+    private void OnSignUpButtonClicked()
+    {
+        SceneManager.LoadScene("Signup");
+    }
+
     private IEnumerator LoginCoroutine(string email, string pwd)
     {
-        string url = baseUrl + "users/login";  // 로그인 API 엔드포인트 URL
+        string url = Config.baseUrl + "users/login";  // 로그인 API 엔드포인트 URL
         LoginRequest loginRequest = new LoginRequest(email, pwd);  // 로그인 요청 객체 생성
         string jsonRequestBody = JsonUtility.ToJson(loginRequest);  // 요청 객체를 JSON 문자열로 변환
 
@@ -94,7 +100,7 @@ public class LoginManager : MonoBehaviour
 
     private IEnumerator RefreshTokenCoroutine(string refreshToken)
     {
-        string url = baseUrl + "tokens/create";  // 토큰 갱신 API 엔드포인트 URL
+        string url = Config.baseUrl + "tokens/create";  // 토큰 갱신 API 엔드포인트 URL
         using (UnityWebRequest www = new UnityWebRequest(url, "POST"))
         {
             www.uploadHandler = new UploadHandlerRaw(new byte[0]);
@@ -159,7 +165,6 @@ public class LoginManager : MonoBehaviour
 
         StartCoroutine(FadeOutText(errorMessage, 2f)); // 2초 동안 서서히 사라짐
     }
-
 }
 
 [System.Serializable]
