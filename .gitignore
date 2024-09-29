@@ -79,3 +79,6 @@ crashlytics-build.properties
 
 # ProjectSettings
 /ProjectSettings/
+
+# Debug
+/Temp/obj/Debug/
